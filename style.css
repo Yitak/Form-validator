@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Syne+Mono&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 555;
+}
+
+.img-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: auto;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -25%);
+  z-index: 3;
+}
+
+.container {
+  z-index: 2;
+  width: 480px;
+  height: 775px;
+  background-color: rgba(243, 243, 243, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-family: 'Syne Mono', monospace;
+  font-size: 33px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+/* Form */
+
+.form-group {
+  height: 75px;
+  width: 100%;
+}
+
+label {
+  position: relative;
+  bottom: 3px;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(243, 243, 243, 0.8);
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+input:focus:valid {
+  border: 2px solid rgb(79, 139, 79);
+}
+
+input:focus:invalid {
+  border: 2px solid rgb(180, 51, 51);
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: rgba(0, 0, 0, 0.8) radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.8) 1%) center/15000%;
+}
+
+.ripple:active {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 3px;
+  height: 50px;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+button:hover {
+  filter: brightness(115%);
+}
+
+.message-container {
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 351.41px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
